@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EnterName</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <section id="conversation">
+            <img src="img/onlinelogo-01.png" class="logo">
+            <input id="myInput" type="text" autofocus>
+            <i></i>
+
+            <button id="myBtn" onclick="myFunction()"><b>ENTER</b></button>
+            
+            <script>
+            var input = document.getElementById("myInput");
+            input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+            document.getElementById("myBtn").click();
+    }
+});
+</script>
+
+            <p id="demo">password required - restricted area</p>
+
+            <script>
+            function myFunction() {
+                var text;
+                var fruits = document.getElementById("myInput").value;
+
+                switch(fruits) {
+                    case "Daniels":
+                        text = "Access Granted :)";
+                    break;
+                    case "Williams":
+                    text = "Welcome Dr. Williams";
+                    break;
+                    case "Lynn":
+                    text = "Welcome Nurse Lynn";
+                    break;
+                    default:
+                    text = "access denied...";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+            </script>
+        </section> 
+        <section id="number" style="font-size:.6em; padding-left:30px; position:absolute; top:30px; right:30px;">Version 1.0</section>
+    </body>
+</html>
